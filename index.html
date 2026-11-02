@@ -5,297 +5,30 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Percy Park RFC | Rugby since 1872, clubhouse hire in North Shields</title>
 <meta name="description" content="Percy Park RFC, North Shields. Rugby for every age since 1872, and a clubhouse for weddings, celebrations and wakes with room for 350 and a balcony over the pitch.">
+<!-- PRIVATE DEMO. REMOVE AT LAUNCH: this noindex tag on every page, and robots.txt (Disallow: /). -->
+<meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#0c0c0d">
+<link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
 
 <!--
-  DESIGN MOCK for the Percy Park RFC committee. One page, no JavaScript, one Google Font (Barlow Condensed for display type, system fonts for body).
+  DEMONSTRATION SITE for the Percy Park RFC committee. Static pages, no JavaScript on this page, one Google Font (Barlow Condensed for display type, system fonts for body).
+  Shared styles live in site.css, used by every page. Pages: index, hire, play, bar, join, club, 404.
 
   REAL (taken from the audit notes or the club's own site on 2 Nov 2026):
-  - Address, phone 0191 257 5710, bar hours (Google profile), 4.5 stars from 286 reviews
+  - Address, phone 0191 257 5710, bar hours (Google profile), 4.5 stars from 286 Google reviews
   - Capacity 350, two bars, balcony, lift, free on-site parking (Facebook venue post), seating 200 round / 300 long tables
   - Three testimonials, verbatim from the club's own Club Hire page
-  - Photographs and the crest, downloaded from percyparkrfc.co.uk (2019/2020 uploads), for layout only
-  - Social links, ClubZap sign-up address
+  - Photographs for layout only (2019/2020 uploads from percyparkrfc.co.uk), the crest as cleaned in brand/ and copied to img/
+  - Social links, ClubZap sign-up address, Pirates touch facts (see play.html)
 
-  PLACEHOLDER (every one marked in a comment below, and styled with a dashed gold underline where it shows on the page):
-  - Next home game, "This week at Bar 1872", all hire "from" prices, coordinator names, training days and times,
-    contact names, sponsor board, the Tough Love Gym banner, the girls photograph
+  PLACEHOLDER (every one marked in a comment, and styled with a dashed gold underline where it shows on the page):
+  - Next home game, "This week at Bar 1872", all hire "from" prices, coordinator names, training days and times (youth boys now Sundays 10 to 12, from the club's own Come and Play page),
+    contact names, sponsor board, the Tough Love Gym banner, the girls and Pirates photographs
 -->
-
-<style>
-:root{
-  --ink:#0c0c0d; --ink-2:#17171a; --ink-3:#232327;
-  --paper:#fbfaf7; --stone:#efece6; --line:#dcd8cf; --mute:#5d5b57;
-  --gold:#e4b23a; --gold-deep:#b9871a; --on-gold:#17120a;
-  --r:14px; --gut:16px; --max:1200px;
-  --display:"Barlow Condensed","Arial Narrow","Helvetica Neue",Arial,sans-serif;
-  --body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-}
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:clip;-webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit}
-h1,h2,h3,h4,p,ul,dl,dd,blockquote,figure{margin:0}
-ul{padding:0;list-style:none}
-.wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gut)}
-@media(min-width:700px){:root{--gut:28px}}
-@media(min-width:1100px){:root{--gut:40px}}
-
-/* type */
-.display,h1,h2,h3{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.005em;line-height:.95}
-.eyebrow{font:700 14px/1.2 var(--display);letter-spacing:.16em;text-transform:uppercase}
-h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
-.lede{font-size:clamp(1.08rem,2.2vw,1.3rem);line-height:1.55;max-width:38em}
-.section{padding-block:clamp(64px,10vw,128px)}
-.section-head{margin-bottom:clamp(32px,5vw,56px);display:grid;gap:16px}
-.section-head .eyebrow{color:var(--gold-deep)}
-.dark .section-head .eyebrow,.hero .eyebrow{color:var(--gold)}
-
-/* placeholders: shown so the committee can see what must be supplied */
-.ph{background:rgba(228,178,58,.2);border-bottom:1px dashed var(--gold-deep);padding:0 4px;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
-.coord .ph,.tile dd .ph{white-space:normal}
-.dark .ph,.footer .ph{background:rgba(228,178,58,.16);border-color:var(--gold)}
-
-/* buttons */
-.btn{--bg:var(--ink);--fg:#fff;--bd:var(--ink);display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:12px 26px;border-radius:999px;background:var(--bg);color:var(--fg);border:2px solid var(--bd);font:700 18px/1.05 var(--display);letter-spacing:.07em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s,transform .2s;text-align:center}
-.btn:hover{--bg:#000;transform:translateY(-1px)}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-gold{--bg:var(--gold);--fg:var(--on-gold);--bd:var(--gold)}
-.btn-gold:hover{--bg:#f0c04f;--bd:#f0c04f}
-.btn-white{--bg:#fff;--fg:var(--ink);--bd:#fff}
-.btn-white:hover{--bg:var(--stone);--bd:var(--stone)}
-.btn-line{--bg:transparent;--fg:var(--ink);--bd:var(--ink)}
-.btn-line:hover{--bg:var(--ink);--fg:#fff}
-.dark .btn-line{--fg:#fff;--bd:rgba(255,255,255,.5)}
-.dark .btn-line:hover{--bg:#fff;--fg:var(--ink);--bd:#fff}
-.btn-block{width:100%}
-:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
-.btn:focus-visible{outline-color:#fff;outline-offset:3px}
-.btn-gold:focus-visible{outline-color:var(--ink)}
-.dark .btn-gold:focus-visible{outline-color:#fff}
-
-/* nav */
-.nav{position:absolute;inset:0 0 auto 0;z-index:20;color:#fff}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:84px}
-.nav img.crest{width:112px;height:auto;filter:drop-shadow(0 1px 6px rgba(0,0,0,.6))}
-.nav ul{display:flex;gap:4px;align-items:center}
-.nav a.l{display:inline-flex;align-items:center;min-height:44px;padding:0 12px;font:700 16px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;text-decoration:none;opacity:.92;transition:opacity .2s}
-.nav a.l:hover{opacity:1;text-decoration:underline;text-underline-offset:6px;text-decoration-color:var(--gold)}
-.nav .hide-s{display:none}
-.nav .btn{min-height:44px;padding:8px 18px;font-size:15px;margin-left:6px}
-@media(min-width:900px){.nav .hide-s{display:list-item}.nav img.crest{width:140px}.nav .wrap{height:100px}}
-
-/* hero */
-.hero{position:relative;color:#fff;background:var(--ink);isolation:isolate;min-height:min(100svh,920px);display:flex;align-items:flex-end;padding:132px 0 clamp(120px,16vw,180px)}
-.hero .bg{position:absolute;inset:0;z-index:-2}
-.hero .bg img{width:100%;height:100%;object-fit:cover;object-position:62% 50%;filter:saturate(.8) contrast(1.06) brightness(.92)}
-.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,8,10,.72) 0%,rgba(8,8,10,.38) 55%,rgba(8,8,10,.15) 100%),linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,0) 28%,rgba(8,8,10,.30) 58%,rgba(8,8,10,.95) 100%)}
-@media(max-width:699px){.hero::after{background:linear-gradient(180deg,rgba(8,8,10,.55) 0%,rgba(8,8,10,.4) 35%,rgba(8,8,10,.62) 62%,rgba(8,8,10,.95) 100%)}}
-.hero .wrap{display:grid;gap:22px}
-.hero h1{font-size:clamp(3rem,13.2vw,7.6rem);line-height:.9;max-width:11em}
-.hero h1 span{display:block}
-.hero h1 .l2{color:#fff;border-left:0}
-.hero .lede{color:rgba(255,255,255,.9);max-width:34em}
-.hero .rule{width:72px;height:5px;background:var(--gold);border-radius:3px}
-.hero .ctas{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:520px;margin-top:6px}
-.hero .ctas .btn{min-height:62px;font-size:17px;padding-inline:12px}
-@media(min-width:700px){.hero .ctas .btn{font-size:19px;padding-inline:20px}}
-.proof{display:flex;flex-wrap:wrap;gap:8px 22px;font:600 15px/1.3 var(--body);color:rgba(255,255,255,.88);margin-top:4px}
-.proof li{display:flex;align-items:center;gap:8px}
-.proof svg{width:18px;height:18px;color:var(--gold);flex:none}
-
-/* strip */
-.strip{position:relative;z-index:5;margin-top:calc(-1 * clamp(70px,9vw,110px))}
-.strip .wrap{display:grid;gap:16px}
-@media(min-width:900px){.strip .wrap{grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}}
-.card{background:#fff;border-radius:var(--r);box-shadow:0 18px 50px -18px rgba(0,0,0,.45)}
-.fixture{padding:clamp(22px,3vw,34px);display:flex;flex-direction:column;gap:18px}
-.fixture .fx{flex:1;align-content:center}
-.fixture .eyebrow{color:var(--gold-deep)}
-.fx{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:center}
-.fx-date{background:var(--ink);color:#fff;border-radius:12px;width:104px;padding:12px 0 14px;text-align:center;font-family:var(--display);text-transform:uppercase;line-height:1}
-.fx-date b{display:block;font-size:3.6rem;font-weight:800;line-height:.95}
-.fx-date small{display:block;font-size:1.05rem;letter-spacing:.14em;font-weight:700}
-.fx h3{font-size:clamp(1.9rem,5vw,2.6rem);line-height:.98}
-.fx h3 em{font-style:normal;color:var(--gold-deep);padding:0 .12em}
-.fx .meta{margin-top:10px;color:var(--mute);font-size:.98rem;line-height:1.45}
-.fx .meta strong{color:var(--ink)}
-.fixture .row{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:16px}
-.baropen{display:inline-flex;align-items:center;gap:10px;font:700 17px/1 var(--display);letter-spacing:.08em;text-transform:uppercase}
-.baropen i{width:10px;height:10px;border-radius:50%;background:#2fa84f;box-shadow:0 0 0 4px rgba(47,168,79,.2)}
-.tlink{font:700 16px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--gold);padding:4px 0;cursor:pointer}
-.tlink:hover{border-color:var(--ink)}
-
-.thisweek{background:var(--ink);color:#fff;overflow:hidden;display:grid}
-.thisweek .pic{position:relative;height:150px}
-.thisweek .pic img{width:100%;height:100%;object-fit:cover;object-position:50% 38%;filter:brightness(.62) saturate(.9)}
-.thisweek .pic .eyebrow{position:absolute;left:clamp(22px,3vw,34px);bottom:16px;color:var(--gold)}
-.thisweek .pic h3{position:absolute;left:clamp(22px,3vw,34px);top:16px;font-size:clamp(2rem,5vw,2.8rem)}
-.tw-list{padding:6px clamp(22px,3vw,34px) 14px}
-.tw-list li{display:grid;grid-template-columns:54px 1fr auto;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.14)}
-.tw-list li:last-child{border-bottom:0}
-.tw-list .day{font:800 1.5rem/1 var(--display);text-transform:uppercase;letter-spacing:.04em;color:var(--gold)}
-.tw-list .what{font-weight:600;line-height:1.3}
-.tw-list .what span{display:block;font-weight:400;font-size:.9rem;color:rgba(255,255,255,.66)}
-.tw-list .when{font:700 1.05rem/1 var(--display);letter-spacing:.06em;text-transform:uppercase;text-align:right;color:rgba(255,255,255,.9)}
-
-/* hire */
-.hire{background:var(--paper)}
-.hire h2{max-width:11em}
-.rooms{display:grid;gap:12px;grid-template-columns:1fr}
-@media(min-width:800px){.rooms{grid-template-columns:2fr 1fr;grid-auto-rows:1fr}}
-.rooms figure{position:relative;border-radius:var(--r);overflow:hidden;background:var(--ink);min-height:240px}
-.rooms img{width:100%;height:100%;object-fit:cover}
-.rooms figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;color:#fff;font:700 15px/1.2 var(--display);letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(0deg,rgba(0,0,0,.78),transparent)}
-.rooms .big{aspect-ratio:3/2}
-@media(min-width:800px){.rooms .big{aspect-ratio:auto;min-height:440px}}
-.facts{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:var(--r);background:#fff;margin-top:12px;overflow:hidden}
-.facts li{display:flex;flex-direction:column;gap:6px;padding:20px 18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line)}
-.facts li:nth-child(2n){border-right:0}
-.facts li:last-child{grid-column:1/-1;border-bottom:0;border-right:0}
-.facts svg{width:28px;height:28px;color:var(--gold-deep)}
-.facts b{font:800 2.4rem/.95 var(--display);text-transform:uppercase}
-.facts span{font-size:.95rem;color:var(--mute);line-height:1.35}
-@media(min-width:900px){.facts{grid-template-columns:repeat(5,1fr)}.facts li{border-bottom:0;border-right:1px solid var(--line)!important}.facts li:last-child{grid-column:auto;border-right:0!important}}
-
-.hire-cards{display:grid;gap:16px;margin-top:clamp(40px,6vw,72px)}
-@media(min-width:900px){.hire-cards{grid-template-columns:repeat(3,1fr);gap:22px}}
-.hcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
-.hcard .ph-img{aspect-ratio:16/10;overflow:hidden;background:var(--ink)}
-.hcard .ph-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.hcard:hover .ph-img img{transform:scale(1.03)}
-.hcard .body{padding:24px 22px 24px;display:flex;flex-direction:column;gap:14px;flex:1}
-.hcard h3{font-size:2.5rem}
-.price{display:flex;align-items:baseline;flex-wrap:wrap;gap:6px 10px}
-.price small{font:700 15px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
-.price b{font:800 2.7rem/.9 var(--display)}
-.price .chip{font:700 11px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;border:1px dashed var(--gold-deep);color:var(--gold-deep);padding:5px 7px;border-radius:5px;align-self:center}
-.hcard .inc{color:#2c2b29;font-size:1rem}
-.coord{display:flex;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--line);font-size:.95rem;color:var(--mute);margin-top:auto}
-.coord .av{width:40px;height:40px;border-radius:50%;background:var(--stone);display:grid;place-items:center;color:var(--mute);flex:none}
-.coord .av svg{width:20px;height:20px}
-.coord b{display:block;color:var(--ink);font-weight:600}
-
-.quotes{display:grid;gap:14px;margin-top:clamp(48px,7vw,88px)}
-@media(min-width:900px){.quotes{grid-template-columns:repeat(3,1fr);gap:22px}}
-.quotes figure{background:var(--ink);color:#fff;border-radius:var(--r);padding:28px 26px 24px;display:flex;flex-direction:column;gap:18px;position:relative}
-.quotes blockquote{font:700 clamp(1.55rem,3.4vw,1.9rem)/1.12 var(--display);text-transform:none;letter-spacing:.005em}
-.quotes blockquote::before{content:"\201C";display:block;font:800 4.4rem/.6 var(--display);color:var(--gold);margin-bottom:6px;height:34px}
-.quotes figcaption{margin-top:auto;font-size:.95rem;color:rgba(255,255,255,.7)}
-.quotes figcaption b{color:#fff;font-weight:600}
-.cta-band{margin-top:clamp(40px,6vw,64px);background:var(--ink);color:#fff;border-radius:var(--r);padding:clamp(28px,5vw,56px);display:grid;gap:22px;align-items:center}
-@media(min-width:900px){.cta-band{grid-template-columns:1.4fr auto}}
-.cta-band h3{font-size:clamp(2.2rem,5.6vw,3.8rem)}
-.cta-band p{color:rgba(255,255,255,.78);margin-top:12px;max-width:34em}
-.cta-band .acts{display:grid;gap:10px}
-@media(min-width:560px) and (max-width:899px){.cta-band .acts{grid-template-columns:1fr 1fr}}
-
-/* play */
-.dark{background:var(--ink);color:#fff}
-.play .section-head h2{max-width:10em}
-.play .lede{color:rgba(255,255,255,.82)}
-.matchday{position:relative;border-radius:var(--r);overflow:hidden;margin-bottom:clamp(24px,4vw,40px);aspect-ratio:16/9;max-height:520px;width:100%}
-@media(min-width:700px){.matchday{aspect-ratio:21/8}}
-.matchday img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
-.matchday figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;font:700 15px/1.2 var(--display);letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(0deg,rgba(0,0,0,.8),transparent)}
-.tiles{display:grid;gap:16px}
-@media(min-width:640px){.tiles{grid-template-columns:1fr 1fr}}
-@media(min-width:1000px){.tiles{grid-template-columns:repeat(3,1fr);gap:22px}}
-.tile{background:var(--ink-2);border:1px solid var(--ink-3);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
-.tile .pic{position:relative;aspect-ratio:3/2;overflow:hidden;background:var(--ink-3)}
-.tile .pic img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.tile:hover .pic img{transform:scale(1.03)}
-.tile .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(12,12,13,.9) 0%,rgba(12,12,13,0) 55%)}
-.tile .pic .t{position:absolute;left:20px;right:20px;bottom:16px;z-index:2}
-.tile h3{font-size:clamp(2.6rem,6.5vw,3.4rem);line-height:.9}
-.tile .age{font:700 15px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-top:6px}
-.tile .body{padding:20px 20px 22px;display:grid;gap:14px;flex:1;align-content:start}
-.tile dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 16px;font-size:.98rem;line-height:1.5}
-.tile dt{color:rgba(255,255,255,.58)}
-.tile dd{font-weight:600}
-.free{display:flex;gap:10px;align-items:center;background:rgba(228,178,58,.12);border:1px solid rgba(228,178,58,.4);color:#fff;border-radius:10px;padding:11px 14px;font-weight:600;font-size:.98rem;line-height:1.3}
-.free svg{width:20px;height:20px;color:var(--gold);flex:none}
-.tile .more{margin-top:2px;align-self:start}
-/* photo-needed block (girls tile) */
-.nophoto{position:absolute;inset:0;background:radial-gradient(120% 90% at 20% 0%,#34343a 0%,#1b1b1f 55%,#111113 100%)}
-.tile .pic .nophoto img{position:absolute;left:50%;top:36%;width:44%;max-width:230px;height:auto;object-fit:contain;transform:translate(-50%,-50%);opacity:.2;transition:none}
-.tile:hover .pic .nophoto img{transform:translate(-50%,-50%)}
-.nophoto span{position:absolute;left:20px;top:16px;font:600 12px/1.3 var(--body);letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.62);border:1px dashed rgba(255,255,255,.35);padding:5px 8px;border-radius:6px}
-
-/* join */
-.join{background:var(--stone)}
-.join-grid{display:grid;gap:16px}
-@media(min-width:900px){.join-grid{grid-template-columns:repeat(3,1fr);gap:22px}}
-.jcard{background:#fff;border-radius:var(--r);padding:28px 24px 26px;display:flex;flex-direction:column;gap:16px;border:1px solid var(--line)}
-.jcard h3{font-size:2.6rem}
-.jcard .sub{color:var(--mute);font-size:1rem}
-.tiers{display:grid;gap:0;border-top:1px solid var(--line)}
-.tiers li{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line);gap:12px}
-.tiers span{font-weight:600}
-.tiers b{font:800 2.1rem/1 var(--display)}
-.tiers b small{font:700 13px/1 var(--display);letter-spacing:.1em;color:var(--mute);margin-left:4px;text-transform:uppercase}
-.jcard .btn{margin-top:auto}
-.jcard.feature{background:var(--ink);color:#fff;border-color:var(--ink)}
-.jcard.feature .sub{color:rgba(255,255,255,.72)}
-.jcard.feature .tiers,.jcard.feature .tiers li{border-color:rgba(255,255,255,.16)}
-.jcard.feature .tiers b small{color:rgba(255,255,255,.6)}
-.jcard.feature .btn-line{--fg:#fff;--bd:rgba(255,255,255,.5)}
-.jcard.feature .btn-line:hover{--bg:#fff;--fg:var(--ink);--bd:#fff}
-
-/* sponsors */
-.sponsors{background:var(--paper)}
-.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-@media(min-width:700px){.logos{grid-template-columns:repeat(4,1fr)}}
-@media(min-width:1000px){.logos{grid-template-columns:repeat(6,1fr);gap:14px}}
-.logos li{aspect-ratio:5/3;background:#e6e3dc;border-radius:10px;display:grid;place-content:center;gap:9px;justify-items:center}
-.logos li i{display:block;width:26px;height:26px;background:#bdb9b0}
-.logos li:nth-child(3n+1) i{border-radius:50%}
-.logos li:nth-child(3n+2) i{border-radius:4px;transform:rotate(45deg) scale(.82)}
-.logos li:nth-child(3n) i{border-radius:6px 6px 14px 14px}
-.logos li span{display:block;width:58px;height:7px;background:#c9c5bc;border-radius:4px}
-.logos li span+span{width:38px;height:6px;margin-top:-3px;opacity:.7}
-.sp-note{margin-top:14px;font-size:.9rem;color:var(--mute)}
-.ad{margin-top:clamp(28px,4vw,44px);position:relative;border-radius:var(--r);overflow:hidden;background:#17171a;color:#fff;display:grid;min-height:220px;text-decoration:none;cursor:pointer;isolation:isolate}
-@media(min-width:800px){.ad{min-height:0;aspect-ratio:4/1;align-items:center}}
-.ad .ad-img{position:absolute;inset:0;z-index:-1;background:
-  repeating-linear-gradient(135deg,rgba(255,255,255,.035) 0 14px,transparent 14px 28px),
-  linear-gradient(100deg,#0e0e10 0%,#26262b 55%,#3a3a41 100%)}
-.ad .ad-img em{position:absolute;right:16px;top:14px;font:600 12px/1.3 var(--body);font-style:normal;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55);border:1px dashed rgba(255,255,255,.3);padding:5px 8px;border-radius:6px}
-.ad .in{padding:28px clamp(22px,4vw,48px);display:grid;gap:10px;align-content:center}
-.ad .tag{justify-self:start;font:700 12px/1 var(--display);letter-spacing:.18em;text-transform:uppercase;background:var(--gold);color:var(--on-gold);padding:6px 9px;border-radius:5px}
-.ad h3{font-size:clamp(2rem,5.4vw,3.6rem);line-height:.95;max-width:12em}
-.ad .go{font:700 16px/1 var(--display);letter-spacing:.12em;text-transform:uppercase;display:inline-flex;gap:10px;align-items:center;border-bottom:2px solid var(--gold);justify-self:start;padding:4px 0}
-.ad:hover .go{border-color:#fff}
-
-/* footer */
-.footer{background:var(--ink);color:#fff;padding:clamp(56px,8vw,96px) 0 0}
-.fgrid{display:grid;gap:40px}
-@media(min-width:900px){.fgrid{grid-template-columns:1.2fr 1fr 1fr;gap:56px}}
-.footer .crest{width:150px;margin-bottom:20px}
-.footer h4{font:700 15px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
-.footer address{font-style:normal;color:rgba(255,255,255,.86);line-height:1.6}
-.footer .tel{display:inline-block;margin-top:14px;font:800 clamp(2rem,6vw,2.8rem)/1 var(--display);letter-spacing:.02em;text-decoration:none;border-bottom:3px solid var(--gold);padding-bottom:2px}
-.hours{display:grid;gap:0}
-.hours li{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.14);color:rgba(255,255,255,.88)}
-.hours li b{font-weight:600;color:#fff}
-.hours li.closed span{color:rgba(255,255,255,.5)}
-.social{display:flex;gap:10px;flex-wrap:wrap}
-.social a{width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;transition:background-color .2s,color .2s;cursor:pointer}
-.social a:hover{background:#fff;color:var(--ink)}
-.social svg{width:22px;height:22px}
-.reviews{margin-top:26px;display:flex;align-items:center;gap:12px;font-weight:600;line-height:1.3}
-.stars{display:flex;gap:2px;color:var(--gold)}
-.stars svg{width:20px;height:20px}
-.reviews small{display:block;font-weight:400;color:rgba(255,255,255,.62)}
-.mocknote{margin-top:clamp(40px,6vw,72px);border-top:1px solid rgba(255,255,255,.14);padding:22px 0 34px;display:grid;gap:8px;font-size:.88rem;color:rgba(255,255,255,.6)}
-.mocknote b{color:#fff;font-weight:600}
-
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
-</style>
 </head>
 <body>
 
@@ -319,16 +52,19 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
   </defs>
 </svg>
 
+<a class="skip" href="#top">Skip to content</a>
 <header class="nav">
   <div class="wrap">
-    <a href="#top" aria-label="Percy Park RFC, home"><img class="crest" src="img/crest.png" alt="Percy Park RFC lion crest" width="202" height="90"></a>
+    <a href="index.html" aria-label="Percy Park RFC, home"><img class="crest" src="img/crest-clean.png" alt="Percy Park RFC crest" width="1600" height="847"></a>
     <nav aria-label="Main">
       <ul>
-        <li><a class="l" href="#hire">Hire</a></li>
-        <li><a class="l" href="#play">Play</a></li>
-        <li class="hide-s"><a class="l" href="#bar">Bar 1872</a></li>
-        <li><a class="l" href="#join">Join</a></li>
-        <li class="hide-s"><a class="btn btn-gold" href="#hire">Book a showaround</a></li>
+        <li><a class="l" href="hire.html">Hire</a></li>
+        <li><a class="l" href="play.html">Play</a></li>
+        <li class="hide-s"><a class="l" href="bar.html">Bar 1872</a></li>
+        <li><a class="l" href="join.html">Join</a></li>
+        <li class="hide-s"><a class="l" href="club.html">The club</a></li>
+        <li class="hide-s"><a class="btn btn-gold" href="hire.html#showaround">Book a showaround</a></li>
+        <li class="more-li"><details class="more"><summary>More</summary><div class="panel"><a href="bar.html">Bar 1872</a><a href="club.html">The club</a><a href="hire.html#showaround">Book a showaround</a></div></details></li>
       </ul>
     </nav>
   </div>
@@ -345,8 +81,8 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
     <div class="rule" aria-hidden="true"></div>
     <p class="lede">A rugby club for every age, and a clubhouse for the days that matter: weddings, birthdays, christenings and the gathering after a funeral.</p>
     <div class="ctas">
-      <a class="btn btn-gold" href="#hire">Hire the clubhouse</a>
-      <a class="btn btn-white" href="#play">Play rugby</a>
+      <a class="btn btn-gold" href="hire.html">Hire the clubhouse</a>
+      <a class="btn btn-white" href="play.html">Play rugby</a>
     </div>
     <ul class="proof">
       <li><svg><use href="#i-star"/></svg>4.5 stars from 286 Google reviews</li>
@@ -388,6 +124,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
         <li><span class="day">Sat</span><span class="what">Rugby on TNT Sports<span>After the 1st XV</span></span><span class="when">From 12</span></li>
         <li><span class="day">Sun</span><span class="what">Sunday lunch<span>Booking not needed</span></span><span class="when">12 to 4</span></li>
       </ul>
+      <p style="padding:0 clamp(22px,3vw,34px) 20px"><a class="tlink" href="bar.html">The whole week at Bar 1872</a></p>
     </article>
 
   </div>
@@ -420,6 +157,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
       (club room hire £95 to £250; wakes £15 to £25 a head). The club must set the real "from" figures. The "Sample price" chip stays until it does.
       Coordinator names are PLACEHOLDERS: the audit says the named manager on the current site has left.
       Included lists are drawn from the current Club Hire page spec (PA, disco, catering available, partitioning, lift, two bars). Wake wording is a draft.
+      The full version of each card, with its own "what is included" list, lives on hire.html.
     -->
     <div class="hire-cards">
       <article class="hcard" id="weddings" data-event="weddings" data-from-price="1200" data-price-unit="per day, room hire">
@@ -429,7 +167,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
           <p class="price"><small>from</small><b>&pound;1,200</b><small>room hire</small><span class="chip">Sample price</span></p>
           <p class="inc">The whole clubhouse for your day. Both bars, the balcony for the photographs, round or long tables, a PA and a dance floor. Catering and a DJ can be added.</p>
           <p class="coord"><span class="av"><svg><use href="#i-user"/></svg></span><span>Your coordinator<b><span class="ph">[Coordinator name]</span></b></span></p>
-          <a class="btn btn-block" href="#showaround" data-enquiry="weddings">Book a showaround</a>
+          <a class="btn btn-block" href="hire.html#weddings" data-enquiry="weddings">See weddings</a>
         </div>
       </article>
 
@@ -440,7 +178,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
           <p class="price"><small>from</small><b>&pound;250</b><small>room hire</small><span class="chip">Sample price</span></p>
           <p class="inc">Birthdays, christenings, engagements and anniversaries. The room splits in two, so a party of forty does not rattle around a room built for three hundred and fifty.</p>
           <p class="coord"><span class="av"><svg><use href="#i-user"/></svg></span><span>Your coordinator<b><span class="ph">[Coordinator name]</span></b></span></p>
-          <a class="btn btn-block" href="#showaround" data-enquiry="celebrations">Book a showaround</a>
+          <a class="btn btn-block" href="hire.html#celebrations" data-enquiry="celebrations">See celebrations</a>
         </div>
       </article>
 
@@ -451,7 +189,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
           <p class="price"><small>from</small><b>&pound;16</b><small>a head</small><span class="chip">Sample price</span></p>
           <p class="inc">A quiet room with a lift and parking, close to Tynemouth crematorium. A hot and cold buffet, tea and coffee, and a bar if you want one. One call and it is sorted.</p>
           <p class="coord"><span class="av"><svg><use href="#i-user"/></svg></span><span>Your coordinator<b><span class="ph">[Coordinator name]</span></b></span></p>
-          <a class="btn btn-block" href="#showaround" data-enquiry="wakes">Book a showaround</a>
+          <a class="btn btn-block" href="hire.html#wakes" data-enquiry="wakes">See wakes and funeral teas</a>
         </div>
       </article>
     </div>
@@ -459,7 +197,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
     <!-- Testimonials: the three below are VERBATIM from the club's own Club Hire page (11 testimonials on the current site), as quoted in the audit notes. -->
     <div class="quotes" aria-label="What people say about the clubhouse">
       <figure>
-        <blockquote>Thank you for making our wedding a lovely day. Great meal, great venue.</blockquote>
+        <blockquote>Thank you for making our wedding a lovely day. Great meal, great venue</blockquote>
         <figcaption><b>Steve and Sue</b><br>Wedding</figcaption>
       </figure>
       <figure>
@@ -479,9 +217,10 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
       </div>
       <div class="acts">
         <a class="btn btn-gold" href="tel:01912575710"><svg><use href="#i-phone"/></svg>0191 257 5710</a>
-        <a class="btn btn-white" href="mailto:info@percyparkrfc.co.uk?subject=Showaround%20enquiry">Send an enquiry</a>
+        <a class="btn btn-white" href="hire.html#showaround">Book a showaround</a>
       </div>
     </div>
+    <div class="more-row"><a class="btn btn-line" href="hire.html">All hire options, prices and questions <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
@@ -491,16 +230,17 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
     <div class="section-head">
       <p class="eyebrow">Play rugby</p>
       <h2 id="play-h">A place for everyone who wants to play.</h2>
-      <p class="lede">Boys and girls from the smallest minis to colts. Women&rsquo;s rugby with the Panthers. Three men&rsquo;s sides. You do not need to have played before, and your first session is on us.</p>
+      <p class="lede">Boys and girls from the smallest minis to colts. Women&rsquo;s rugby with the Panthers. Three men&rsquo;s sides. Touch rugby with the Pirates for anyone who has never played. You do not need to have played before, and your first session is on us.</p>
     </div>
 
     <figure class="matchday"><img src="img/matchday-wide.jpg" alt="The Percy Park first team lined up in black and white hoops with young mascots, the balcony full of supporters behind" width="1600" height="581" loading="lazy"><figcaption>Match day at Preston Avenue</figcaption></figure>
 
     <!--
-      PLAY TILES. All six are the same size on purpose: girls and women sit level with the men, not under them.
-      Days and times are PLACEHOLDERS. Where the current site gives a time (minis Sunday 10 to 12, Panthers Monday and Wednesday 7 to 8.30pm,
-      men Tuesday and Thursday 7 to 9pm) it is used here as the starting figure, but the current site contradicts itself on the Panthers, so the club must confirm.
-      Contact names are PLACEHOLDERS. Photos: real club photos from the current site, except Girls, which has no usable photo yet.
+      PLAY TILES. All seven are the same on purpose: girls and women sit level with the men, not under them, and the Pirates are the easy way in for someone who has never played.
+      Days and times are PLACEHOLDERS. Where the club's own site gives a time (minis and juniors Sunday 10 to 12, Panthers Monday and Wednesday 7 to 8.30pm,
+      men Tuesday and Thursday 7 to 9pm, Pirates Thursday 7 to 8.30pm) it is used here as the starting figure, but the current site contradicts itself on the Panthers, so the club must confirm.
+      Contact names are PLACEHOLDERS. Photos: real club photos from the current site, except Girls and Pirates, which have no usable photo yet.
+      play.html carries the full detail for each section and the "Say you're coming" forms.
     -->
     <div class="tiles">
 
@@ -509,14 +249,29 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
         <div class="body">
           <dl><dt>When</dt><dd><span class="ph">Sundays, 10 to 12</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Minis lead]</span></dd></dl>
           <p class="free"><svg><use href="#i-check"/></svg>First session free, just turn up</p>
+          <a class="tlink more" href="play.html#minis">Details and say you&rsquo;re coming</a>
+        </div>
+      </article>
+
+      <article class="tile" data-team="girls">
+        <div class="pic">
+          <!-- PLACEHOLDER IMAGE: the notes and the club site hold no usable photo of the girls section. Replace with a real one. -->
+          <div class="nophoto" role="img" aria-label="Photo needed: girls training"><img src="img/crest-clean.png" alt=""><span>photo: girls training</span></div>
+          <div class="t"><h3>Girls</h3><p class="age">Under 12 to Under 18</p></div>
+        </div>
+        <div class="body">
+          <dl><dt>When</dt><dd><span class="ph">Wednesdays, 6 to 7.30pm</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Girls lead]</span></dd></dl>
+          <p class="free"><svg><use href="#i-check"/></svg>First session free, just turn up</p>
+          <a class="tlink more" href="play.html#girls">Details and say you&rsquo;re coming</a>
         </div>
       </article>
 
       <article class="tile" data-team="youth-boys">
         <div class="pic"><img src="img/play-youth.jpg" alt="A row of Percy Park youth boys in club training tops" width="994" height="691" loading="lazy"><div class="t"><h3>Youth boys</h3><p class="age">Under 13 to Under 15</p></div></div>
         <div class="body">
-          <dl><dt>When</dt><dd><span class="ph">Wednesdays, 6 to 7.30pm</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Youth lead]</span></dd></dl>
+          <dl><dt>When</dt><dd><span class="ph">Sundays, 10 to 12</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Youth lead]</span></dd></dl>
           <p class="free"><svg><use href="#i-check"/></svg>First session free, just turn up</p>
+          <a class="tlink more" href="play.html#youth">Details and say you&rsquo;re coming</a>
         </div>
       </article>
 
@@ -525,18 +280,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
         <div class="body">
           <dl><dt>When</dt><dd><span class="ph">Thursdays, 6.30 to 8pm</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Colts coach]</span></dd></dl>
           <p class="free"><svg><use href="#i-check"/></svg>First session free, just turn up</p>
-        </div>
-      </article>
-
-      <article class="tile" data-team="girls">
-        <div class="pic">
-          <!-- PLACEHOLDER IMAGE: the notes and the club site hold no usable photo of the girls section. Replace with a real one. -->
-          <div class="nophoto" role="img" aria-label="Photo needed: girls training"><img src="img/crest.png" alt=""><span>photo: girls training</span></div>
-          <div class="t"><h3>Girls</h3><p class="age">Under 12 to Under 18</p></div>
-        </div>
-        <div class="body">
-          <dl><dt>When</dt><dd><span class="ph">Wednesdays, 6 to 7.30pm</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Girls lead]</span></dd></dl>
-          <p class="free"><svg><use href="#i-check"/></svg>First session free, just turn up</p>
+          <a class="tlink more" href="play.html#colts">Details and say you&rsquo;re coming</a>
         </div>
       </article>
 
@@ -545,6 +289,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
         <div class="body">
           <dl><dt>When</dt><dd><span class="ph">Mon and Wed, 7 to 8.30pm</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Panthers contact]</span></dd></dl>
           <p class="free"><svg><use href="#i-check"/></svg>First session free, just turn up</p>
+          <a class="tlink more" href="play.html#women">Details and say you&rsquo;re coming</a>
         </div>
       </article>
 
@@ -553,19 +298,35 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
         <div class="body">
           <dl><dt>When</dt><dd><span class="ph">Tue and Thu, 7 to 9pm</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Director of rugby]</span></dd></dl>
           <p class="free"><svg><use href="#i-check"/></svg>First session free, just turn up</p>
+          <a class="tlink more" href="play.html#men">Details and say you&rsquo;re coming</a>
+        </div>
+      </article>
+
+      <!-- Pirates touch rugby: the seventh door. Mixed adult touch, the easy way in for someone who has never played. Facts and sources are in the comment inside play.html. No usable photo yet. -->
+      <article class="tile wide" data-team="pirates">
+        <div class="pic">
+          <div class="nophoto" role="img" aria-label="Photo needed: Pirates touch rugby"><img src="img/crest-clean.png" alt=""><span>photo: Pirates touch rugby</span></div>
+          <div class="t"><h3>Pirates</h3><p class="age">Mixed adult touch rugby</p></div>
+        </div>
+        <div class="body">
+          <p style="color:rgba(255,255,255,.86)">Touch rugby is rugby without the tackling. It is the easy way in if you have never played, and the drink after is part of it.</p>
+          <dl><dt>When</dt><dd><span class="ph">Thursdays, 7 to 8.30pm</span></dd><dt>Where</dt><dd>Preston Avenue</dd><dt>Contact</dt><dd><span class="ph">[Pirates contact]</span></dd></dl>
+          <p class="free"><svg><use href="#i-check"/></svg>First session free, just turn up</p>
+          <a class="tlink more" href="play.html#pirates">Details and say you&rsquo;re coming</a>
         </div>
       </article>
 
     </div>
+    <div class="more-row"><a class="btn btn-gold" href="play.html">Every section, in full <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
 <!-- MEMBERSHIP AND SUPPORT -->
 <!--
-  Prices Social £80, Vice Patron £90, Full Senior £100 are taken from the brief as the ClubZap prices. The audit notes did NOT read ClubZap prices (listed as a gap),
-  so check them against the live ClubZap membership page before this goes in front of anyone outside the committee.
+  Prices Social £80, Vice Patron £90, Full Senior £100 are the ClubZap prices (full 2026/27 list on join.html, as read in the research report).
+  Check them against the live ClubZap membership page before this goes in front of anyone outside the committee.
   Buttons deep link to the ClubZap sign-up page named in the audit (/membership_signup). A product-level deep link needs the real ClubZap checkout URLs.
-  Sponsorship has no published packages anywhere in the notes, so no price is shown.
+  Sponsorship has no published packages anywhere in the notes, so no price is shown; the ladder is on join.html.
 -->
 <section class="section join" id="join" aria-labelledby="join-h">
   <div class="wrap">
@@ -600,9 +361,10 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
         <ul class="tiers">
           <li><span>Packages</span><b style="font-size:1.5rem">Ask us</b></li>
         </ul>
-        <a class="btn btn-line" href="mailto:info@percyparkrfc.co.uk?subject=Sponsorship%20enquiry">Talk about sponsoring <svg><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-line" href="join.html#sponsor">Talk about sponsoring <svg><use href="#i-arrow"/></svg></a>
       </article>
     </div>
+    <div class="more-row"><a class="btn btn-line" href="join.html">Every tier, the sponsor ladder and how to give <svg><use href="#i-arrow"/></svg></a></div>
   </div>
 </section>
 
@@ -645,7 +407,7 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <img class="crest" src="img/crest.png" alt="Percy Park RFC lion crest" width="202" height="90" loading="lazy">
+        <img class="crest" src="img/crest-since-1872-white.png" alt="Percy Park RFC crest, since 1872" width="1720" height="1141" loading="lazy">
         <h4>Find us</h4>
         <address>Percy Park RFC<br>Preston Avenue<br>North Shields NE30 2BE</address>
         <a class="tel" href="tel:01912575710">0191 257 5710</a>
@@ -674,8 +436,15 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
         <p style="margin-top:22px;color:rgba(255,255,255,.7);max-width:24em">Hiring the clubhouse? Follow <a href="https://www.instagram.com/percy.park.clubhouse/" style="color:#fff">@percy.park.clubhouse</a> on Instagram for rooms, balcony and buffets.</p>
       </div>
     </div>
+    <nav class="fnav" aria-label="Footer">
+      <a href="hire.html">Hire the clubhouse</a>
+      <a href="play.html">Play rugby</a>
+      <a href="bar.html">Bar 1872</a>
+      <a href="join.html">Join, support, sponsor</a>
+      <a href="club.html">The club</a>
+    </nav>
     <div class="mocknote">
-      <p><b>Design mock for the committee.</b> Photographs and the crest are from the current club site and are here to show layout, not final choices. Dates, prices, names and times shown with a dashed underline or marked &ldquo;sample&rdquo; are placeholders for the club to confirm.</p>
+      <p><b>Private demonstration of a new Percy Park RFC website.</b> This is not the club's live site. Photographs and the crest are from the current club site and are here to show layout, not final choices. Dates, prices, names and times shown with a dashed underline or marked &ldquo;sample&rdquo; are placeholders for the club to confirm.</p>
       <p>&copy; Percy Park RFC. Founded 1872.</p>
     </div>
   </div>
