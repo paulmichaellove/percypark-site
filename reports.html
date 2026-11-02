@@ -1,0 +1,264 @@
+<!doctype html>
+<!--
+  MATCH REPORTS. REAL, from the club's own current site, fetched 2 Nov 2026. These are the latest eight 1st XV match reports (headline, post date, scoreline and first paragraph exactly as the club published them).
+  Sources: https://percyparkrfc.co.uk/index.php/teams/1st-xv/1st-xv-reports (the 2025/26 reports) and the 26/27 reports category linked from https://percyparkrfc.co.uk/index.php/teams/1st-xv/1st-xv-fixtures
+  Only the 1st XV publishes match reports on the old site: the Lions and Panthers "Reports" pages hold only last season's fixtures post. So every card here is the 1st XV; the small team label is there for when other sides start to report.
+  The scoreline and competition line under each date are the report's own header lines. The date is the day the report was posted, not the match day.
+  Archive depth: the old site's 1st XV reports category goes back to September 2025 only (26 reports). The audit found an article archive back to roughly 2006 but that could not be confirmed from the reports category, so the line above the list says "the full archive comes across on launch".
+  ON LAUNCH the archive migrates and the "Read the full report" links, which go to the old site for this demo, become internal pages on this site.
+-->
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Match reports | Percy Park RFC</title>
+<meta name="description" content="The latest match reports from Percy Park RFC, straight from the club: the 1st XV in Regional 2 North, the play-offs and the County Plate final.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Percy Park RFC">
+<meta property="og:title" content="Match reports | Percy Park RFC">
+<meta property="og:description" content="The latest match reports from Percy Park RFC, straight from the club: the 1st XV in Regional 2 North, the play-offs and the County Plate final.">
+<meta property="og:image" content="https://percypark.paulmichaellove.com/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://percypark.paulmichaellove.com/reports.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Match reports | Percy Park RFC">
+<meta name="twitter:description" content="The latest match reports from Percy Park RFC, straight from the club: the 1st XV in Regional 2 North, the play-offs and the County Plate final.">
+<meta name="twitter:image" content="https://percypark.paulmichaellove.com/img/og-image.jpg">
+<!-- PRIVATE DEMO. REMOVE AT LAUNCH: this noindex tag on every page, and robots.txt (Disallow: /). -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0c0c0d">
+<link rel="icon" type="image/png" sizes="64x64" href="img/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<!-- SVG icon sprite (Lucide style, 24x24 strokes). Inline, no library. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-glass" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 22h8"/><path d="M12 11v11"/><path d="m19 3-7 8-7-8Z"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+    <symbol id="i-lift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="m9 10 3-3 3 3"/><path d="m9 14 3 3 3-3"/></symbol>
+    <symbol id="i-balcony" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18"/><path d="M3 21V10"/><path d="M21 21V10"/><path d="M8 10v11"/><path d="M12 10v11"/><path d="M16 10v11"/><path d="M5 10V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21.1 7 14.2 2 9.3l6.9-1z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2Z"/></symbol>
+    <symbol id="i-fb" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-1 .4-1.7 1.8-1.7h1.6V3.8c-.3 0-1.3-.2-2.5-.2-2.5 0-4.2 1.5-4.2 4.3v2.6H7.4v3.3h2.8V22z"/></symbol>
+    <symbol id="i-ig" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></symbol>
+    <symbol id="i-cal" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-tv" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="m17 2-5 5-5-5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-ext"viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+  </defs>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav">
+  <div class="wrap">
+    <a href="index.html" aria-label="Percy Park RFC, home"><img class="crest" src="img/crest-clean.png" alt="Percy Park RFC crest" width="1600" height="847"></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a class="l" href="hire.html">Hire</a></li>
+        <li><a class="l" href="play.html">Play</a></li>
+        <li class="hide-s"><a class="l" href="bar.html">Bar 1872</a></li>
+        <li class="hide-s"><a class="l" href="fixtures.html">Fixtures</a></li>
+        <li class="hide-s"><a class="l" href="reports.html" aria-current="page">Match reports</a></li>
+        <li><a class="l" href="join.html">Join</a></li>
+        <li class="hide-s"><a class="l" href="club.html">The club</a></li>
+        <li class="hide-s"><a class="btn btn-gold" href="hire.html#showaround">Book a showaround</a></li>
+        <li class="more-li"><details class="more"><summary>More</summary><div class="panel"><a href="bar.html">Bar 1872</a><a href="fixtures.html">Fixtures</a><a href="reports.html">Match reports</a><a href="club.html">The club</a><a href="hire.html#showaround">Book a showaround</a></div></details></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero short" aria-labelledby="h1">
+  <div class="bg"><img src="img/play-men.jpg" alt="A Percy Park forward carrying the ball in a match" width="1337" height="960" fetchpriority="high" style="--pos:50% 35%"></div>
+  <div class="wrap">
+    <p class="eyebrow">Percy Park RFC &middot; North Shields</p>
+    <h1 id="h1"><span>Match reports.</span><span class="l2">Straight from the club.</span></h1>
+    <div class="rule" aria-hidden="true"></div>
+    <p class="lede">How the 1st XV got on, told by the people who stood on the touchline. Tries, turning points and the names that made the difference.</p>
+    <div class="ctas">
+      <a class="btn btn-gold" href="#reports">Latest reports</a>
+      <a class="btn btn-white" href="fixtures.html">Fixtures and results</a>
+    </div>
+  </div>
+</section>
+
+<section class="section paper" id="reports" aria-labelledby="rep-h">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Latest reports</p>
+      <h2 id="rep-h">The 1st XV, game by game.</h2>
+      <p class="lede">The full archive comes across on launch.</p>
+    </div>
+    <div class="rlist">
+      <article class="rcard" id="durham-city-2026-10-24">
+        <div class="rmeta">
+          <div class="rtop"><span class="rteam">1st XV</span><span class="rdate">Posted <time datetime="2026-10-28">28 October 2026</time></span></div>
+          <p class="rscore"><span class="res w" aria-label="Won">W</span><span>Percy Park <b>31</b> Durham City <b>19</b></span></p>
+          <p class="rcomp">Regional 2 North</p>
+        </div>
+        <div class="rbody">
+          <h3>Victory Over City Brings Fifth Successive Win</h3>
+          <p>As Storm Boelo moved in across the North East, Percy Park entertained Durham City in what was an entertaining and hard fought Regional 2 North game with the swirling wind a factor before the worst of the weather closed in. It was, in many ways, the classic wind affected game of two halves, Park using the conditions in the first half to lead comfortably at the break, City pegging them back to within one score before a late Chris Reekie try secured the win and the bonus point. At the death, Durham pounded the Park line for the score that would have given them both the try and losing bonus points but excellent defence denied them although few in around the ground would have begrudged them something from the game.</p>
+          <a class="tlink rmore" href="https://percyparkrfc.co.uk/index.php/teams/1st-xv/1st-xv-reports/victory-over-city-brings-fifth-successive-win" target="_blank" rel="noopener">Read the full report</a>
+        </div>
+      </article>
+      <article class="rcard" id="ryton-2026-10-17">
+        <div class="rmeta">
+          <div class="rtop"><span class="rteam">1st XV</span><span class="rdate">Posted <time datetime="2026-10-21">21 October 2026</time></span></div>
+          <p class="rscore"><span class="res w" aria-label="Won">W</span><span>Ryton <b>17</b> Percy Park <b>26</b></span></p>
+          <p class="rcomp">Regional 2 North</p>
+        </div>
+        <div class="rbody">
+          <h3>Park March On After Victory At Ryton</h3>
+          <p>Percy Park maintained their excellent start to the league season with a hard fought win at newly promoted Ryton on Saturday last. In a game dominated by the whistle of Referee Andrew Temple, Park survived the loss of four players to yellow cards to record their fourth successive victory. Indiscipline appeared to be the key ingredient of the match, the home side losing two players to yellow cards, though some decisions clearly perplexed the players and supporters from both sides. That said, it appeared to be a tight, hard but fair contest with Park only securing victory in the last few minutes, former skipper Howard Stock scoring the bonus point try late on.</p>
+          <a class="tlink rmore" href="https://percyparkrfc.co.uk/index.php/component/content/article/park-march-on-after-victory-at-ryton?catid=229&amp;Itemid=101" target="_blank" rel="noopener">Read the full report</a>
+        </div>
+      </article>
+      <article class="rcard" id="novocastrians-2026-10-10">
+        <div class="rmeta">
+          <div class="rtop"><span class="rteam">1st XV</span><span class="rdate">Posted <time datetime="2026-10-14">14 October 2026</time></span></div>
+          <p class="rscore"><span class="res w" aria-label="Won">W</span><span>Novocastrians <b>29</b> Percy Park <b>38</b></span></p>
+          <p class="rcomp">Regional 2 North</p>
+        </div>
+        <div class="rbody">
+          <h3>It's Three From Three As Park Defeat Novo's</h3>
+          <p>Park, sitting top of Regional 2 North in the early season table, travelled to Novocastrians, sitting in second, for a top of the table clash last weekend. And in a game dominated by an extremely strong wind it was Park who triumphed through dogged defence against the wind in the first half followed by clever use of it in the second, five second half tries without response ensuring the victory. Incredibly, after their league and cup double last season, this was Novo’s first defeat at Sutherland Park in eighteen months.</p>
+          <a class="tlink rmore" href="https://percyparkrfc.co.uk/index.php/component/content/article/its-three-from-three-as-park-defeat-novos?catid=229&amp;Itemid=101" target="_blank" rel="noopener">Read the full report</a>
+        </div>
+      </article>
+      <article class="rcard" id="penrith-2026-10-03">
+        <div class="rmeta">
+          <div class="rtop"><span class="rteam">1st XV</span><span class="rdate">Posted <time datetime="2026-10-07">7 October 2026</time></span></div>
+          <p class="rscore"><span class="res w" aria-label="Won">W</span><span>Percy Park <b>62</b> Penrith <b>48</b></span></p>
+          <p class="rcomp">Regional 2 North</p>
+        </div>
+        <div class="rbody">
+          <h3>Park At The Summit After Two Games</h3>
+          <p>Yes, one hundred and ten points were scored. No, it was not a basketball game. Yes, the defence coaches are not sleeping BUT what an incredible game. Defensive lapses apart (and there were plenty), this was a game full of attacking intent, particularly from Percy Park, and an incredible result against one of the more fancied teams for promotion this year. Credit to Penrith, they played their part in what was a great game, maybe not for the purists because of, on occasion, very poor defence, but for those who truly love the game watching this was pure joy with eighteen tries scored. The visitors, despite a terrible first half, dragged themselves back to within one score in the second before a Park second wind secured the points.</p>
+          <a class="tlink rmore" href="https://percyparkrfc.co.uk/index.php/component/content/article/park-at-the-summit-after-two-games?catid=229&amp;Itemid=101" target="_blank" rel="noopener">Read the full report</a>
+        </div>
+      </article>
+      <article class="rcard" id="west-hartlepool-2026-09-26">
+        <div class="rmeta">
+          <div class="rtop"><span class="rteam">1st XV</span><span class="rdate">Posted <time datetime="2026-10-01">1 October 2026</time></span></div>
+          <p class="rscore"><span class="res w" aria-label="Won">W</span><span>Percy Park <b>45</b> West Hartlepool <b>35</b></span></p>
+          <p class="rcomp">Regional 2 North</p>
+        </div>
+        <div class="rbody">
+          <h3>Park Recover To Secure Opening Weekend Victory</h3>
+          <p>West Hartlepool were our last visitors in the regular 2025/26 season in April and just a few months later they returned to Preston Avenue as our opening opponents to the new, if slightly delayed, 2026/27 season. There was an air of expectancy around the ground, real anticipation for the season to finally get under way and the game did not disappoint with Park having to overcome an early 0-17 points deficit to post an opening day bonus point victory against a spirited and hard-working West side who deservedly gained a try bonus point themselves.</p>
+          <a class="tlink rmore" href="https://percyparkrfc.co.uk/index.php/component/content/article/park-recover-to-secure-opening-weekend-victory?catid=229&amp;Itemid=101" target="_blank" rel="noopener">Read the full report</a>
+        </div>
+      </article>
+      <article class="rcard" id="consett-play-off-2026-04">
+        <div class="rmeta">
+          <div class="rtop"><span class="rteam">1st XV</span><span class="rdate">Posted <time datetime="2026-04-28">28 April 2026</time></span></div>
+          <p class="rscore"><span class="res " aria-label="Lost">L</span><span>Consett <b>59</b> Percy Park <b>35</b></span></p>
+          <p class="rcomp">Regional 2 North Play-Off Final</p>
+        </div>
+        <div class="rbody">
+          <h3>Play-Off Defeat At Consett Ends The Season</h3>
+          <p>Percy Park’s hopes for promotion and the season itself came to an end on Saturday when they suffered defeat at Consett in the Regional 2 North Play-Off Final at Amethyst Park. Four weeks after suffering a high scoring, albeit narrow, league defeat at the same venue, there was a quiet confidence that we could engineer the win against the odds just three days after the County Plate Final defeat to Novocastrians but, after a bright start, a ten minute period before the first quarter had ended saw the home side score four tries that effectively decided the game. From then on, Park were always chasing the game and with a twenty-one-point deficit at the break, there was a mountain to climb. The Consett back line, much like the Novo’s threequarters last Wednesday, were electric and, particularly in that first half, the Park defence had no answers. Consett will now travel to Pocklington, winners of the Regional 2 North East Play-Off Final 34-20 against Morley, next Saturday to decide who plays York (who lost 20-14 at Middlesborough in the Regional 1 North Relegation Play-Off) for the right to play at Level 5 next season.</p>
+          <a class="tlink rmore" href="https://percyparkrfc.co.uk/index.php/teams/1st-xv/1st-xv-reports/play-off-defeat-at-consett-ends-the-season" target="_blank" rel="noopener">Read the full report</a>
+        </div>
+      </article>
+      <article class="rcard" id="novocastrians-plate-final-2026-04">
+        <div class="rmeta">
+          <div class="rtop"><span class="rteam">1st XV</span><span class="rdate">Posted <time datetime="2026-04-23">23 April 2026</time></span></div>
+          <p class="rscore"><span class="res " aria-label="Lost">L</span><span>Percy Park <b>24</b> Novocastrians <b>42</b></span></p>
+          <p class="rcomp">Northumberland County Plate Final</p>
+        </div>
+        <div class="rbody">
+          <h3>Novo's Win Plate Final After Second Half Park Collapse</h3>
+          <p>The mood in the clubhouse pre match was bullish; silverware to be won, a strong side selected, a place in the Regional 2 North Play-Off Final secured, confidence high but Novo’s didn’t bother to read the script. Trailing 24-10 after thirty-five minutes, the Newcastle side then proceeded to score six unanswered tries, five in a dazzling second half display, to outclass the home side and claim a thoroughly deserved victory in the County Plate Final under the Preston Avenue lights.</p>
+          <a class="tlink rmore" href="https://percyparkrfc.co.uk/index.php/teams/1st-xv/1st-xv-reports/novos-win-plate-final-after-second-half-park-collapse" target="_blank" rel="noopener">Read the full report</a>
+        </div>
+      </article>
+      <article class="rcard" id="west-hartlepool-2026-04">
+        <div class="rmeta">
+          <div class="rtop"><span class="rteam">1st XV</span><span class="rdate">Posted <time datetime="2026-04-16">16 April 2026</time></span></div>
+          <p class="rscore"><span class="res w" aria-label="Won">W</span><span>Percy Park <b>59</b> West Hartlepool <b>41</b></span></p>
+          <p class="rcomp">Regional 2 North</p>
+        </div>
+        <div class="rbody">
+          <h3>Play-Off Place Secured After Victory Over West</h3>
+          <p>Fourth placed Park took on fifth placed West Hartlepool last weekend, a place in the league play-offs guaranteed for the winner and, in an excellent, high scoring game it was Park who came out victorious after a hard fought and entertaining contest. However, on the Monday after a wonderful day at Preston Avenue, an exciting game preceded by a very well attended past players lunch, there was a sense of anti-climax when Keswick, who finished in fourth place after defeat at Upper Eden, and who we would have faced at home in the Regional 2 North semi-final play-off announced that they were conceding the tie. We will now play the winner of the Consett vs Sunderland semi-final which will be played this coming weekend, 18 April.</p>
+          <a class="tlink rmore" href="https://percyparkrfc.co.uk/index.php/teams/1st-xv/1st-xv-reports/play-off-place-secured-after-victory-over-west" target="_blank" rel="noopener">Read the full report</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <img class="crest" src="img/crest-since-1872-white.png" alt="Percy Park RFC crest, since 1872" width="1720" height="1141" loading="lazy">
+        <h4>Find us</h4>
+        <address>Percy Park RFC<br>Preston Avenue<br>North Shields NE30 2BE</address>
+        <a class="tel" href="tel:01912575710">0191 257 5710</a>
+        <div class="reviews">
+          <div class="stars" role="img" aria-label="4.5 out of 5 stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg style="opacity:.45"><use href="#i-star"/></svg></div>
+          <div>4.5 stars from 286 reviews<small>on Google</small></div>
+        </div>
+      </div>
+      <div>
+        <h4>Bar 1872 opening hours</h4>
+        <!-- source: Google Business Profile 2 Nov 2026; the old site's homepage shows different hours (Mon 18.30 to 23.00, Tue to Thu 18.30 to 23.00, Fri 17.00 to midnight, Sat 13.00 to midnight, Sun 14.00 to 23.00); Paul says Google is right, club to confirm -->
+        <ul class="hours">
+          <li class="closed"><b>Monday</b><span>Closed</span></li>
+          <li><b>Tuesday to Thursday</b><span>6.30pm to 10pm</span></li>
+          <li><b>Friday</b><span>5pm to 11pm</span></li>
+          <li><b>Saturday</b><span>12 noon to 11.30pm</span></li>
+          <li><b>Sunday</b><span>12 noon to 10pm</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow the club</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/percyparkrfc/" aria-label="Percy Park RFC on Facebook"><svg><use href="#i-fb"/></svg></a>
+          <a href="https://www.instagram.com/percyparkrfc/" aria-label="Percy Park RFC on Instagram"><svg><use href="#i-ig"/></svg></a>
+          <a href="https://twitter.com/PercyParkRFC" aria-label="Percy Park RFC on X"><svg><use href="#i-x"/></svg></a>
+        </div>
+        <p style="margin-top:22px;color:rgba(255,255,255,.7);max-width:24em">Hiring the clubhouse? Follow <a href="https://www.instagram.com/percy.park.clubhouse/" style="color:#fff">@percy.park.clubhouse</a> on Instagram for rooms, balcony and buffets.</p>
+      </div>
+    </div>
+    <nav class="fnav" aria-label="Footer">
+      <a href="hire.html">Hire the clubhouse</a>
+      <a href="play.html">Play rugby</a>
+      <a href="bar.html">Bar 1872</a>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="reports.html">Match reports</a>
+      <a href="join.html">Join, support, sponsor</a>
+      <a href="club.html">The club</a>
+    </nav>
+    <div class="mocknote">
+      <p><b>Private demonstration of a new Percy Park RFC website.</b> This is not the club's live site. Photographs and the crest are from the current club site and are here to show layout, not final choices. Dates, prices, names and times shown with a dashed underline or marked &ldquo;sample&rdquo; are placeholders for the club to confirm.</p>
+      <p>&copy; Percy Park RFC. Founded 1872.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -60,6 +60,9 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
 .nav .hide-s{display:none}
 .nav .btn{min-height:44px;padding:8px 18px;font-size:15px;margin-left:6px}
 @media(min-width:900px){.nav .hide-s{display:list-item}.nav img.crest{height:56px}.nav .wrap{height:100px}}
+/* seven links plus the button need to fit on one line between 900 and 1119 */
+@media(min-width:900px) and (max-width:1119px){.nav img.crest{height:46px}.nav ul{gap:0}.nav a.l{padding:0 7px;font-size:14px;letter-spacing:.07em;white-space:nowrap}.nav .btn{padding:8px 14px;font-size:14px;white-space:nowrap;margin-left:2px}}
+@media(min-width:1120px){.nav a.l{white-space:nowrap}}
 
 /* hero */
 .hero{position:relative;color:#fff;background:var(--ink);isolation:isolate;min-height:min(100svh,920px);display:flex;align-items:flex-end;padding:132px 0 clamp(120px,16vw,180px)}
@@ -496,5 +499,97 @@ h2{font-size:clamp(2.6rem,8.2vw,5.4rem)}
 
 /* section call to action rows on the homepage */
 .more-row{margin-top:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:10px}
+
+/* result badge, shared by the homepage "Last time out" line, the fixtures tables and the match report cards */
+.res{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;padding:0 7px;border-radius:7px;font:800 16px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;background:var(--stone);color:var(--ink);border:1px solid var(--line)}
+.res.w{background:var(--gold);color:var(--on-gold);border-color:var(--gold)}
+.res.d{background:#fff;color:var(--ink);border-color:var(--ink)}
+
+/* homepage: last time out, inside the next home game card */
+.lastout{border-top:1px solid var(--line);padding-top:16px;display:grid;gap:8px}
+.lo-score{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font:800 clamp(1.5rem,4.4vw,1.85rem)/1.05 var(--display);text-transform:uppercase;letter-spacing:.005em}
+.lo-score b{color:var(--gold-deep);font-weight:800}
+.lo-score{flex-wrap:nowrap;align-items:flex-start}
+.lo-score .res{margin-top:1px;flex:none}
+.lo-score span:not(.res){text-wrap:balance;min-width:0}
+.lo-link{font-weight:600;font-size:1rem;line-height:1.35;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:4px}
+.lo-link:hover{text-decoration-color:var(--ink)}
+
+/* fixtures page: team switcher, one panel per team, shown with :target (no script) */
+.switch{margin-bottom:clamp(24px,4vw,36px)}
+.switch a.ext::after{content:"\2197";margin-left:6px;color:var(--gold-deep);font-size:1.05em}
+.switch a.on{background:var(--ink);color:#fff}
+.fpanel{scroll-margin-top:clamp(150px,22vw,190px)}
+@supports selector(:has(*)){
+  .fpanels>.fpanel{display:none}
+  .fpanels>.fpanel:target,.fpanels:not(:has(.fpanel:target))>.fpanel:first-child{display:block}
+  body:not(:has(.fpanel:target)) .switch a[href="#first-xv"],
+  body:has(#first-xv:target) .switch a[href="#first-xv"],
+  body:has(#second-xv:target) .switch a[href="#second-xv"],
+  body:has(#panthers:target) .switch a[href="#panthers"]{background:var(--ink);color:#fff}
+}
+.fhead{display:grid;gap:8px;margin-bottom:clamp(18px,3vw,26px)}
+.fhead .eyebrow{color:var(--gold-deep)}
+.fhead h2{font-size:clamp(2.6rem,7vw,4rem)}
+.ftable{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.ftable th{font:700 14px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);background:var(--stone);text-align:left;padding:14px 16px;border-bottom:1px solid var(--line);white-space:nowrap}
+.ftable td{padding:15px 16px;border-top:1px solid var(--line);vertical-align:middle;line-height:1.35}
+.ftable tbody tr:first-child td{border-top:0}
+.ftable .fdate{font:800 1.45rem/1 var(--display);text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+.ftable .fdate small{display:block;margin-top:4px;font:700 13px/1 var(--display);letter-spacing:.14em;color:var(--mute)}
+.ftable .opp{font-weight:700;font-size:1.08rem}
+.ftable .ha{font-weight:600}
+.ftable .ha.away{color:var(--mute);font-weight:500}
+.ftable .ko,.ftable .comp{color:var(--mute);white-space:nowrap}
+.ftable .none{color:var(--mute);font-size:.92rem}
+.ftable td.rsl{white-space:nowrap}
+.ftable .score{font:800 1.3rem/1 var(--display);letter-spacing:.04em;margin-left:8px;vertical-align:middle}
+.ftable .rep a{font:700 15px/1 var(--display);letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border-bottom:2px solid var(--gold);padding:4px 0;white-space:nowrap}
+.ftable .rep a:hover{border-color:var(--ink)}
+.ftable tr.next td{background:rgba(228,178,58,.16)}
+.ftable tr.next td:first-child{box-shadow:inset 5px 0 0 var(--gold)}
+.nextbadge{display:inline-block;margin-bottom:6px;background:var(--gold);color:var(--on-gold);font:700 12px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;padding:5px 8px;border-radius:5px}
+.fnote{margin-top:16px;max-width:46em}
+.fnote a{font-weight:600;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
+.zaprow{margin-top:clamp(28px,4vw,44px);display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media(max-width:899px){
+  .ftable thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+  .ftable,.ftable tbody{display:block}
+  .ftable tr{display:grid;grid-template-columns:auto auto 1fr auto;grid-template-areas:"date date res res" "opp opp opp opp" "ha ko comp rep";gap:6px 14px;padding:16px 16px 15px;border-top:1px solid var(--line);align-items:baseline}
+  .ftable tbody tr:first-child{border-top:0}
+  .ftable td{display:block;padding:0;border:0}
+  .ftable td.fdate{grid-area:date}
+  .ftable td.fdate small{display:inline;margin:0 0 0 8px}
+  .ftable td.rsl{grid-area:res;justify-self:end;text-align:right}
+  .ftable td.opp{grid-area:opp}
+  .ftable td.ha{grid-area:ha}
+  .ftable td.ko{grid-area:ko}
+  .ftable td.comp{grid-area:comp}
+  .ftable td.rep{grid-area:rep;justify-self:end}
+  .ftable tr.next{background:rgba(228,178,58,.16);box-shadow:inset 5px 0 0 var(--gold)}
+  .ftable tr.next td{background:none}
+  .ftable tr.next td:first-child{box-shadow:none}
+  .ftable .nextbadge{margin:0 0 0 8px}
+}
+
+/* match reports page: a list of cards, newest first */
+.rlist{display:grid;gap:clamp(14px,2vw,20px);margin-top:clamp(8px,2vw,16px)}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:clamp(22px,3.4vw,36px);display:grid;gap:18px;scroll-margin-top:24px}
+.rcard .rmeta{display:grid;gap:10px;align-content:start}
+.rcard .rtop{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.rteam{display:inline-block;font:700 12px/1 var(--display);letter-spacing:.16em;text-transform:uppercase;background:var(--ink);color:#fff;padding:6px 9px;border-radius:5px}
+.rdate{font:700 15px/1.2 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.rscore{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font:800 clamp(1.5rem,4vw,1.8rem)/1.05 var(--display);text-transform:uppercase}
+.rscore b{color:var(--gold-deep)}
+.rscore{flex-wrap:nowrap;align-items:flex-start}
+.rscore .res{margin-top:1px;flex:none}
+.rscore span:not(.res){text-wrap:balance;min-width:0}
+.rcard .rcomp{font-size:.95rem;color:var(--mute)}
+.rcard .rbody{display:grid;gap:14px;align-content:start}
+.rcard h3{font-size:clamp(2rem,5vw,2.8rem);line-height:.98}
+.rcard .rbody p{max-width:46em;color:#2c2b29}
+.rcard .rmore{justify-self:start}
+@media(min-width:900px){.rcard{grid-template-columns:260px minmax(0,1fr);gap:clamp(28px,4vw,52px)}}
 
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
